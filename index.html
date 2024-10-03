@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body{
+            padding: 0;
+            margin: 0; 
+            background-color: dimgrey;
+            display: grid;
+            grid-template-columns: 1fr 320px 1fr;
+           
+        }
+        .min-device {
+            height: 480px;
+            background-color: white;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 3fr 3fr 3fr;
+        }
+
+        
+        nav{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+
+        }
+
+        .logo {
+            font-family: Bahnschrift, sans-serif;
+            font-size: 14px;
+            padding: 10px;
+        }
+        
+        .box{
+            border:1px solid black;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="min-device">
+
+    <nav>
+        <div class="box">
+            menu
+        </div>
+        <div class="logo"> KemiFRI </div>
+    </nav>
+        <!--<div class="nav"></div>-->
+        <!--<div class="box"></div>
+        <div class="box"></div>-->
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        
+
+
+
+
+
+
+    </div>
+    <div></div>
+    
+</body>
+</html>
