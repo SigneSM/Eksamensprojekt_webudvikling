@@ -20,7 +20,6 @@
         .min-device {
             height: 480px;
             background-color: white;
-
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr 3fr 3fr 3fr;
@@ -34,9 +33,21 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            
-
         }
+/*
+        .navLinje {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+
+        .CenterBillede {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%
+        }*/
 
         .BurgerMenu{
             padding: 7px;
@@ -50,10 +61,54 @@
         }
         
         .box{
-            border:1px solid black;
+            border:1px solid lightgrey;
+        }
+
+        .Front1Billede {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .Front2Billede {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .Front3Billede {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-family: Bahnschrift, sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            /*text-align: center;*/
+            margin-top: 25px;
+            /*border: 1px solid black;*/
+            margin-bottom: 2px;
+            padding-left: 8px;
+            padding-right: 8px;
         }
 
 
+        .frontText{
+            padding-left: 8px;
+            padding-right: 8px;
+            font-style:italic;
+        }
 
     </style>
 </head>
@@ -61,32 +116,54 @@
     <div></div>
     <div class="min-device">
 
-    <nav>
-        <div class="BurgerMenu">
+        <nav>
+            <div class="BurgerMenu">
+                <img src="billeder/Hamburger_icon.svg.png" style="width:20px;" />
+            </div>
+            <div class="logo">
+                <!--KemiFRI-->
+                <img src="billeder/logo_mockup.PNG" style="width: 80px" />
+            </div>
 
-            <img src="billeder/Hamburger_icon.svg.png" style="width:20px;" />
+        </nav>
+        <!--<div class="navLinje">
+            <img src="billeder/streg.jpg" class="CenterBillede" />
+        </div>-->
+
+
+
+        <div class="Front1Billede">
+            <img src="billeder/still-life-bathroom-cleaning-products_dim2.jpg" style="width:100%; height: auto;" />
+
+
         </div>
-        <div class="logo"> 
-            <!--KemiFRI--> 
-            <img src="billeder/logo_mockup.PNG" style="width: 80px" />
+
+        <div style="text-align: right">
+            <h1>VIS MIG</h1>
+            <div class="frontText">produkter som er uden skadelig kemi</div>
         </div>
-    </nav>
-        <!--<div class="nav"></div>-->
-        <!--<div class="box"></div>
-        <div class="box"></div>-->
 
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
 
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+        <div class="Front2Billede">
+            <img src="billeder/young-woman-taking-groceries-out-bag_dim2.jpg" style="width: 100%; height: auto;" />
+        </div>
+        <div style="text-align:left;">
+            <h1>LÆR MIG</h1>
+            <div class="frontText">om ingredienser jeg kan undgå</div>
 
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        
+        </div>
+
+
+        <div class="Front3Billede">
+            <img src="billeder/bathroom_dim2.jpg" style="width: 100%; height: auto;" />
+        </div>
+
+
+        <div style="text-align:right">
+            <h1>VEJLED MIG</h1>
+            <div class="frontText" >med gode råd og ting at overveje</div>
+        </div>
+
 
 
 
