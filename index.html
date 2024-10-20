@@ -3,72 +3,24 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="KemiFri_stylesheet.css">
+    <title>KemiFRI</title>
 
-        body{
-            padding: 0;
-            margin: 0; 
-            background-color: dimgrey;
-            display: grid;
-            grid-template-columns: 1fr 320px 1fr;
-           
-        }
-        .min-device {
-            height: 480px;
-            background-color: white;
+    <style>
+
+        main {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 1fr 3fr 3fr 3fr;
+            grid-template-rows: repeat(3, 1fr);
         }
 
-        
-        nav{
-            grid-column-start: 1;
-            grid-column-end: 4;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-/*
-        .navLinje {
-            grid-column-start: 1;
-            grid-column-end: 4;
-            grid-row-start: 2;
-            grid-row-end: 3;
-        }
-
-        .CenterBillede {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 90%
-        }*/
-
-        .BurgerMenu{
-            padding: 7px;
-
-        }
-
-        .logo {
-            font-family: Bahnschrift, sans-serif;
-            font-size: 14px;
-            padding: 7px;
-        }
-        
-        .box{
-            border:1px solid lightgrey;
-        }
 
         .Front1Billede {
             grid-column-start: 1;
             grid-column-end: 3;
-            grid-row-start: 2;
-            grid-row-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
             margin-top: 10px;
             margin-bottom: 10px;
         }
@@ -76,8 +28,8 @@
         .Front2Billede {
             grid-column-start: 2;
             grid-column-end: 4;
-            grid-row-start: 3;
-            grid-row-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
             margin-top: 10px;
             margin-bottom: 10px;
         }
@@ -85,93 +37,174 @@
         .Front3Billede {
             grid-column-start: 1;
             grid-column-end: 3;
-            grid-row-start: 4;
-            grid-row-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
             margin-top: 10px;
             margin-bottom: 10px;
+        }
+
+
+        .FrontBilledeTekst {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+            padding-left: 8px;
+            padding-right: 8px;
+            font-style: italic;
+            vertical-align: central;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.9em;
+        }
+
+        .Tekst1Billede {
+            text-align: right;
+        }
+
+        .Tekst2Billede {
+            text-align: left;
+        }
+
+        .Tekst3Billede {
+            text-align: right;
         }
 
         h1 {
             font-family: Bahnschrift, sans-serif;
             font-size: 16px;
             font-weight: 800;
-            /*text-align: center;*/
-            margin-top: 25px;
-            /*border: 1px solid black;*/
-            margin-bottom: 2px;
-            padding-left: 8px;
-            padding-right: 8px;
+            font-style: normal;
+            margin-bottom: 3px;
         }
 
 
-        .frontText{
-            padding-left: 8px;
-            padding-right: 8px;
-            font-style:italic;
+        a {
+            color: black;
+            text-decoration: none;
         }
 
+
+        @media (min-width: 600px) {
+            main {
+                display: grid;
+                grid-template-columns: repeat(3 1fr);
+                grid-template-rows: auto 100px;
+            }
+
+            .FrontBillede {
+                grid-row-start: 1;
+                grid-row-end: 2;
+                margin: 25px 15px 0px 15px;
+            }
+
+            .Front1Billede {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+
+
+            .Front2Billede {
+                grid-column-start: 2;
+                grid-column-end: 3
+            }
+
+            .Front3Billede {
+                grid-column-start: 3;
+                grid-column-end: 4;
+            }
+
+            .FrontBilledeTekst {
+                text-align: center;
+                font-size: 1.2em;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                font-weight: 800;
+                font-style: normal;
+                margin-bottom: 4px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div></div>
-    <div class="min-device">
 
-        <nav>
-            <div class="BurgerMenu">
-                <img src="billeder/Hamburger_icon.svg.png" style="width:20px;" />
+
+    <!--HEADER-->
+    <header>
+        <div class="logo">
+            <a href="C:\Users\Signe\Documents\GitHub\Eksamensprojekt_webudvikling\index.html">
+                <img src="billeder/logo_mockup.PNG" alt="Logo" />
+            </a>
+        </div>
+    </header>
+
+
+    <main>
+        <!--SEKTION 1 - PRODUKTER-->
+        <div class="FrontBillede Front1Billede">
+            <a href="C:\Users\Signe\Documents\GitHub\Eksamensprojekt_webudvikling\produkter.html">
+                <img src="billeder/320_600_still-life-bathroom-cleaning-products.jpg"
+                     alt="badeartikler på badeværelse"
+                     sizes="(min-width:600px), 50vw, 75vw"
+                     srcset="billeder/320_600_still-life-bathroom-cleaning-products.jpg 600w,
+                 billeder/600_1200_still-life-bathroom-cleaning-products.jpg 1200w" />
+            </a>
+        </div>
+
+        <a href="C:\Users\Signe\Documents\GitHub\Eksamensprojekt_webudvikling\produkter.html">
+            <div class="FrontBilledeTekst Tekst1Billede">
+
+                <h1>PRODUKTER</h1>
+                <div>som er gode for dig og dit hjem</div>
+
             </div>
-            <div class="logo">
-                <!--KemiFRI-->
-                <img src="billeder/logo_mockup.PNG" style="width: 80px" />
+        </a>
+
+        <!--SEKTION 2 - VIDEN-->
+        <div class="FrontBillede Front2Billede">
+            <a href="C:\Users\Signe\Documents\GitHub\Eksamensprojekt_webudvikling\viden.html">
+                <img src="billeder/320_600_young-woman-taking-groceries-out-bag.jpg"
+                     alt="kvinde i køkken med varer"
+                     sizes="(min-width:600px), 50vw, 75vw"
+                     srcset="billeder/320_600_young-woman-taking-groceries-out-bag.jpg 600w,
+                        billeder/600_1200_young-woman-taking-groceries-out-bag.jpg 1200w" />
+
+            </a>
+        </div>
+
+        <a href="C:\Users\Signe\Documents\GitHub\Eksamensprojekt_webudvikling\viden.html">
+            <div class="FrontBilledeTekst Tekst2Billede">
+                <h1>BLIV KLOGERE</h1>
+                <div>på skadelig kemi</div>
             </div>
+        </a>
 
-        </nav>
-        <!--<div class="navLinje">
-            <img src="billeder/streg.jpg" class="CenterBillede" />
-        </div>-->
-
-
-
-        <div class="Front1Billede">
-            <img src="billeder/still-life-bathroom-cleaning-products_dim2.jpg" style="width:100%; height: auto;" />
-
-
+        <!--SEKTION 3 - VEJLEDNING-->
+        <div class="FrontBillede Front3Billede">
+            <a href="C:\Users\Signe\Documents\GitHub\Eksamensprojekt_webudvikling\vejledning.html">
+                <img src="billeder/320_bathroom.jpg"
+                     alt="badeværelse"
+                     sizes="(min-width:600px), 50vw, 75vw"
+                     srcset="billeder/320_600_bathroom.jpg 600w,
+        billeder/600_1200_bathroom.jpg 1200w" />
+            </a>
         </div>
 
-        <div style="text-align: right">
-            <h1>VIS MIG</h1>
-            <div class="frontText">produkter som er uden skadelig kemi</div>
-        </div>
+        <a href="C:\Users\Signe\Documents\GitHub\Eksamensprojekt_webudvikling\vejledning.html">
+            <div class="FrontBilledeTekst Tekst3Billede">
+                <h1>KOM I GANG</h1>
+                <div>- hjælp til hvor du kan starte</div>
+            </div>
+        </a>
+
+    </main>
+
+    <footer>
+        Alle billeder: <i>designed by Freepik</i>
+    </footer>
 
 
-        <div class="Front2Billede">
-            <img src="billeder/young-woman-taking-groceries-out-bag_dim2.jpg" style="width: 100%; height: auto;" />
-        </div>
-        <div style="text-align:left;">
-            <h1>LÆR MIG</h1>
-            <div class="frontText">om ingredienser jeg kan undgå</div>
-
-        </div>
-
-
-        <div class="Front3Billede">
-            <img src="billeder/bathroom_dim2.jpg" style="width: 100%; height: auto;" />
-        </div>
-
-
-        <div style="text-align:right">
-            <h1>VEJLED MIG</h1>
-            <div class="frontText" >med gode råd og ting at overveje</div>
-        </div>
-
-
-
-
-
-
-
-    </div>
-    <div></div>
-    
 </body>
 </html>

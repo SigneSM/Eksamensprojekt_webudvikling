@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KemiFRI</title>
+    <link rel="stylesheet" href="KemiFri_stylesheet.css">
+
+    <!-- Til Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+
+    <style>
+        main {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1em;
+            /*padding: 5px;*/
+        }
+
+        .tilToppen {
+            font-size: 0.8em;
+            padding: 3px 10px 0px;
+        }
+
+        iframe {
+            display: block;
+            width: 90vw;
+            height: 50.625vw; /*ratio 16:9*/
+            margin: 10px auto;
+        }
+
+        #KortKobenhavn {
+            height: 290px;
+            width: auto;
+        }
+
+        .indhold {padding: 10px 10px 0px}
+
+        ol{padding:0px 20px; }
+
+        li {padding-top: 8px;}
+
+        p{
+            margin-top:3px; 
+            margin-bottom:2px;}
+
+
+        @media(min-width:600px) {
+            main {
+                padding: 0px;
+            }
+
+            iframe {
+                width: 90vw;
+                height: 50.6vw; /*ratio 16:9*/
+                max-width: 900px;
+                max-height: 506px;
+                margin: 30px auto;
+            }
+
+            #KortKobenhavn {
+                width: 90vw;
+                max-width: 900px;
+                height: 450px;
+                margin: 30px auto;
+            }
+
+            .tilToppen {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo" id="header">
+            <a href="C:\Users\Signe\Documents\GitHub\Eksamensprojekt_webudvikling\index.html">
+                <img src="billeder/logo_mockup.PNG" alt="Logo" />
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <h2>Anbefalede butikker </h2>
+
+            <div class="indhold">
+                <!-- Container og leaflet-script -->
+                <div id="KortKobenhavn" class="indhold"></div>
+                <script src="Script/Map.js"></script>
+            </div>
+
+            <a href="#header" class="tilToppen">til toppen</a>
+        </div>
+
+        <div>
+            <h2>
+                Om rengøringsmidler uden skadelig kemi
+            </h2>
+
+            <div class="indhold">
+                <iframe src="https://www.youtube.com/embed/tMBwchMz5lc?si=ywmrvGbdnYjb8FeG"
+                        title="YouTube video player"
+                        frameborder="0"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                </iframe>
+
+            </div>
+            <a href="#header" class="tilToppen">til toppen</a>
+        </div>
+
+
+        <div>
+            <h2>Kom godt i gang med et hjem uden skadelig kemi</h2>
+
+            <div class="indhold">
+                <p><i>Teksten er genereret af AI.</i></p>
+                Al begyndelse er svær, og det kan være hlet uoverskueligt, hvor du skal starte, når du gerne vil reducere mængden af skadelig kemi
+                du udsættes for. Men du er ikke alene! Med disse 8 overvejelser er du godt på vej og taget det første store skrift
+
+                <ol>
+                    <li>
+                        <u>Identificér problemområder </u><br />
+                        Start med at kigge på de kemiske produkter, du bruger mest i hjemmet, f.eks. rengøringsmidler, personlig plejeprodukter eller tøjvaskemidler. Mange af disse indeholder kemikalier, der kan være skadelige for både sundhed og miljø. Det kan være en god idé at læse ingredienslister for at forstå, hvad du egentlig bringer ind i dit hjem.
+                    </li>
+                    <li>
+                        <u>Forskning og uddannelse</u><br />
+                        Undersøg alternativer til de produkter, du bruger i dag. Mange naturlige og økologiske mærker tilbyder rengøringsmidler og personlig plejeprodukter, der indeholder færre kemiske tilsætningsstoffer. Der findes også masser af opskrifter på hjemmelavede løsninger med ingredienser som eddike, natron og citronsaft, som er både effektive og miljøvenlige.
+                    </li>
+                    <li>
+                        <u>Prioritér sundheden</u><br />
+                        Mange kemiske produkter kan afgive dampe, som påvirker luftkvaliteten i hjemmet og potentielt kan forårsage allergier, hovedpine eller andre sundhedsproblemer. Ved at vælge produkter uden skadelige kemikalier kan du forbedre dit indeklima og reducere risikoen for helbredsproblemer, især for børn, ældre og dem med følsom hud.
+                    </li>
+                    <li>
+                        <u>Miljøhensyn</u><br />
+                        Kemiske produkter kan have en skadelig virkning på miljøet, når de skylles ud i afløbet eller fordamper i luften. Produkter med fosfater, parabener og syntetiske duftstoffer kan ende i vandløb og have en negativ indvirkning på dyreliv og økosystemer. Ved at skifte til miljøvenlige og biologisk nedbrydelige alternativer reducerer du din økologiske fodaftryk.
+                    </li>
+                    <li>
+                        <u>Mindre plastik og emballage</u><br />
+                        Mange kemiske rengørings- og plejeprodukter kommer i plastikemballage, som bidrager til affaldsproblemet. Ved at lave dine egne produkter eller vælge mærker, der bruger genanvendelig eller plastikfri emballage, kan du også reducere mængden af affald i dit hjem.
+                    </li>
+                    <li>
+                        <u>Opbevaring og sikkerhed</u><br />
+                        Når du vælger naturlige alternativer, bør du stadig være opmærksom på korrekt opbevaring. Selv naturlige ingredienser kan være stærke og skal håndteres med respekt. Sørg for at mærke flasker og beholdere tydeligt, især hvis du har små børn i hjemmet.
+                    </li>
+                    <li>
+                        <u>Økonomiske overvejelser</u><br />
+                        Naturlige eller økologiske alternativer kan nogle gange være dyrere, men der er ofte mulighed for at spare penge ved at lave dine egne rengøringsmidler. Basisprodukter som eddike, natron og essentielle olier kan strække sig langt og kan i mange tilfælde erstatte en lang række kommercielle produkter.
+                    </li>
+                    <li>
+                        <u>Vær realistisk</u><br />
+                        Overgangen til et kemikaliefrit hjem behøver ikke at ske på én gang. Start med de områder, der betyder mest for dig, og arbejd dig gradvist frem. Det er vigtigt at finde en balance, der fungerer for din hverdag, så du stadig føler, at dit hjem er rent og sundt.
+                    </li>
+                </ol>
+                <p>
+                    Ved at tage disse overvejelser til dig kan du gradvist reducere brugen af kemiske produkter i dit hjem, skabe et sundere miljø for dig selv og din familie samt bidrage til en mere bæredygtig fremtid.
+                </p>
+            </div>
+
+            <a href="#header" class="tilToppen">til toppen</a>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        Alle billeder: <i>designed by Freepik</i>
+    </footer>
+
+
+</body>
+</html>
